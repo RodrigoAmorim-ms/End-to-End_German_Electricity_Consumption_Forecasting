@@ -53,7 +53,14 @@ All experiments are tracked using MLflow, making results transparent and reprodu
 │   ├── Processed/
 │   │   └── GermanEnergyConsumption.parquet
 │   └── Raw/
-│       └── time_series_60min_singleindex.csv 
+│       └── time_series_60min_singleindex.csv
+│
+├── Results/                  # Forecasts of each model and true predictions
+│   ├── y_pred_TFT.npy
+│   ├── y_pred_XGBoost.npy
+│   ├── y_pred_daily.npy
+│   ├── y_pred_weekly.npy
+│   ├── y_true.npy
 │
 ├── pyproject.toml           # Poetry dependencies
 ├── README.md
@@ -120,6 +127,9 @@ To ensure a fair comparison between models all models predicted the same rolling
 | Naïve (Weekly)| 2558.00 | 4464.94 | 0.0474 |
 | XGBoost       | 450.49  | 598.24  | 0.0082 |
 | TFT           | 2327.10 | 3232.66 | 0.0426 |
+
+**Combined forecast output of all models**
+<img width="1178" height="470" alt="Outputs" src="https://github.com/user-attachments/assets/e126692f-53a2-4c1a-a84e-af7ff4a0a2cf" />
 
 
 ## Conclusion 
